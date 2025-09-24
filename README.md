@@ -2,23 +2,17 @@
 
 ### Goal: Build a Simple Slot Machine
 
-Build a simple slot machine with minimum 5 items per reel and 3 reels - user should be able to bet min or max and have their total update
+This is a web-based slot machine that simulates spinning reels with random symbols, allows minimum or maximum betting, deducts bets and updates balance in real-time. 
 
-### How to submit your code for review:
+Tools used: HTML, CSS, JavaScript
 
-- Fork and clone this repo
-- Create a new branch called answer
-- Checkout answer branch
-- Push to your fork
-- Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
+Lessons learned: 
+-How to connect JavaScript to HTML elements.
+-How to handle events in JavaScript
+-How to control the timing with setInterval, clearInterval
+-How to manage the balance, bet, and spin updates
+-How to fork and clone a repository, push/commit
 
-Example:
-```
-I completed the challenge: 5
+I completed the challenge: 4
 I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+Open to constructive feedback
