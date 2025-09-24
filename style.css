@@ -95,7 +95,7 @@ button:disabled{
     background-color: green; 
 }
 .btnstop{ 
-    background-color: #c93333; 
+    background-color: orange; 
 }
 .btnreset{
   font-size: 0.5em;
@@ -128,7 +128,7 @@ h2{
   text-align: center;
 }
 
-/* 🎾 Tennis pictures */
+/* Tennis pictures */ /*got some help from Innocent with the background pictures of the tennis players*/
 .ten1{
   background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Roger_Federer_2.jpg");
   object-fit: cover;

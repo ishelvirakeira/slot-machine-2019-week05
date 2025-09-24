@@ -16,38 +16,38 @@ const placeToSee = document.querySelector('#placeToSee');
 const spinBtn = document.querySelector('#spinBtn');
 const stopBtn = document.querySelector('#stopBtn');
 
-
+//used Google AI overview for and used the source below to come up with  the structure after getting my html and css working;
+//source: https://webdesign.tutsplus.com/how-to-create-a-slot-machine-game-in-vanilla-javascript--cms-108974t
 let balance = start_bal;
 let currentBet = min_bet;
 let isSpinning = false;
 let spin1 = null, spin2 = null, spin3 = null;
 
-// Init
+//Init
 randomizeSymbol(first);
 randomizeSymbol(middle);
 randomizeSymbol(last);
 render();
 
-stopBtn.addEventListener('click', clickToStop);
-
-// Helpers
+stopBtn.addEventListener('click', clickToStop);//referenced from Javascript DOM crash course
 function randomSymbolClass(){
-    const i = Math.floor(Math.random() * symbols.length);
+    const i = Math.floor(Math.random() * symbols.length);//applied the Math.floor Method from stackoverflow to round to the nearest whole number
     return symbols[i];
 }
 function setSymbol(e, cls){
   // Use the new base class name 'pane'
     e.className = 'pane ' + cls;
 }
-function randomizeSymbol(e){
+function randomizeSymbol(e){ //regarding e parameter inspo from the JavaScript DOM crash course (part 3, part 4) on Traversy Media.
     setSymbol(e, randomSymbolClass());
 }
 function render(msg){
     balanceEl.textContent = balance;
-    betEl.textContent = currentBet;
+    betEl.textContent = currentBet;//referenced from https://stackoverflow.com/questions/53357641/textcontent-returns-undefined
     placeToSee.textContent = balance;
     if (msg !== undefined) messageEl.textContent = msg;
 }
+    placeToSee.textContent = balance;
 function disableSpin(disabled){
     spinBtn.disabled = disabled;
 }
@@ -61,7 +61,7 @@ function betMax(){
     render(`Bet set to $${currentBet}.`);
 }
 
-// Spin / Stop
+// Spin / Stop: this whole part referenced from mdn, the how to create a slot machine in vanilla JavaScript and Google AI overview
 function clickToSpin(){
   if (isSpinning) return;
   if (balance < currentBet){
@@ -73,7 +73,7 @@ function clickToSpin(){
   isSpinning = true;
   disableSpin(true);
 
-  spin1 = setInterval(() => randomizeSymbol(first), spin_speed);
+  spin1 = setInterval(() => randomizeSymbol(first), spin_speed); //figure out the source; maybe on stackoverflow: include innocent's
   spin2 = setInterval(() => randomizeSymbol(middle), spin_speed);
   spin3 = setInterval(() => randomizeSymbol(last), spin_speed);
 }
@@ -83,7 +83,9 @@ function clickToStop(){
     render('Press Spin first ');
     return;
   }
-  clearInterval(spin1); clearInterval(spin2); clearInterval(spin3);
+  clearInterval(spin1); 
+  clearInterval(spin2); 
+  clearInterval(spin3);
   spin1 = spin2 = spin3 = null;
 
   const a = first.className.replace('pane ','');
@@ -93,7 +95,7 @@ function clickToStop(){
   let win = 0;
   let msg = '';
 
-  if (a === b && b === c){
+  if (a === b && b === c){//
     win = currentBet * 5;
     msg = `JACKPOT! (+$${win})`;
   } else if (a === b || a === c || b === c){
@@ -109,7 +111,7 @@ function clickToStop(){
   render(`${msg} • New balance: $${balance}`);
 }
 
-// === Reset ===
+//Reset when clicked: referenced from stackoverflow, mdn
 function clearScore(){
   balance = start_bal;
   currentBet = min_bet;
@@ -117,7 +119,7 @@ function clearScore(){
   if (spin1) clearInterval(spin1);
   if (spin2) clearInterval(spin2);
   if (spin3) clearInterval(spin3);
-  spin1 = spin2 = spin3 = null;
+  spin1 = spin2 = spin3 = null; //referenced from google AI overview
 
   randomizeSymbol(first);
   randomizeSymbol(middle);
@@ -127,8 +129,6 @@ function clearScore(){
   render('Game reset. Good luck!');
 }
 
-// Expose to inline HTML buttons
-window.betMin = betMin;
-window.betMax = betMax;
+// Expose to inline onclick: from mdn
 window.clickToSpin = clickToSpin;
 window.clearScore = clearScore;
