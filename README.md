@@ -4,6 +4,9 @@
 
 This is a web-based slot machine that simulates spinning reels with random symbols, allows minimum or maximum betting, deducts bets and updates balance in real-time. 
 
+<img width="702" height="438" alt="slot machine" src="https://github.com/user-attachments/assets/5bb7fb00-402f-41f8-905d-7dccc7021ab1" />
+
+
 Tools used: HTML, CSS, JavaScript
 
 Lessons learned: 
