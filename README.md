@@ -5,6 +5,8 @@
 
 This is a web-based slot machine that simulates spinning reels with random symbols, allows minimum or maximum betting, deducts bets and updates balance in real-time. 
 
+Find the live demo at https://ishelvirakeira.github.io/slot-machine-2019-week05/
+
 <img width="702" height="438" alt="slot machine" src="https://github.com/user-attachments/assets/e4656453-442e-4d6c-934b-16d346053703" />
 
 
