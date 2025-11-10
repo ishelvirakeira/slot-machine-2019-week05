@@ -13,11 +13,11 @@ Find the live demo at https://ishelvirakeira.github.io/slot-machine-2019-week05/
 Tools used: HTML, CSS, JavaScript
 
 Lessons learned: 
--How to connect JavaScript to HTML elements.
--How to handle events in JavaScript
--How to control the timing with setInterval, clearInterval
--How to manage the balance, bet, and spin updates
--How to fork and clone a repository, push/commit
+- How to connect JavaScript to HTML elements.
+- How to handle events in JavaScript
+- How to control the timing with setInterval, clearInterval
+- How to manage the balance, bet, and spin updates
+- How to fork and clone a repository, push/commit
 
 I completed the challenge: 4
 I feel good about my code: 4
